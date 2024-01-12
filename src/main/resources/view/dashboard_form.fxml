@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.SmartCarpenter.controller.DashboardFormController">
+    <children>
+        <AnchorPane layoutY="3.0" prefHeight="720.0" prefWidth="180.0" style="-fx-background-color: white;">
+            <children>
+                <JFXButton fx:id="btnDashboard" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="130.0" onAction="#btnDashboardOnAction" prefHeight="40.0" prefWidth="150.0" text="Dashboard">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnSalary" buttonType="RAISED" contentDisplay="TOP" layoutX="14.0" layoutY="407.0" onAction="#btnSalaryOnAction" prefHeight="40.0" prefWidth="150.0" text="Settings">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <opaqueInsets>
+                        <Insets bottom="10.0" top="10.0" />
+                    </opaqueInsets>
+                </JFXButton>
+                <JFXButton fx:id="btnPayment" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="290.0" onAction="#btnPaymentOnAction" prefHeight="40.0" prefWidth="150.0" text="Receipts">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnMaterials" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="370.0" onAction="#btnMaterialsOnAction" prefHeight="40.0" prefWidth="150.0" text="Materials">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnEmployee" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="330.0" onAction="#btnEmployeeOnAction" prefHeight="40.0" prefWidth="150.0" text="Employee">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnOrder" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="250.0" onAction="#btnOrderOnAction" prefHeight="40.0" prefWidth="150.0" text="Order">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="20.0" layoutY="177.0">
+                    <image>
+                        <Image url="@../icon/customer-management-4-256.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="20.0" layoutY="374.0">
+                    <image>
+                        <Image url="@../icon/wood.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="21.0" layoutY="334.0">
+                    <image>
+                        <Image url="@../icon/carpenter.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="20.0" layoutY="258.0">
+                    <image>
+                        <Image url="@../icon/orders-icon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="21.0" layoutY="298.0">
+                    <image>
+                        <Image url="@../icon/payment-method.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="23.0" layoutY="138.0">
+                    <image>
+                        <Image url="@../icon/monitor.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="btnFurniture" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="210.0" onAction="#btnFurnitureOnAction" prefHeight="40.0" prefWidth="150.0" text="Furniture">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="20.0" layoutY="217.0">
+                    <image>
+                        <Image url="@../icon/furniture.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="34.0" layoutY="545.0">
+                    <image>
+                        <Image url="@../icon/logout.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="btnLogout" layoutX="34.0" layoutY="545.0" onAction="#btnLogoutOnAction" prefHeight="24.0" prefWidth="110.0" text="Logout" />
+                <JFXButton fx:id="btnCustomer" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="170.0" onAction="#btnCustomerOnAction" prefHeight="40.0" prefWidth="150.0" text="Customer">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <ImageView fitHeight="128.0" fitWidth="150.0" layoutX="14.0" layoutY="4.0">
+                    <image>
+                        <Image url="@../icon/Add_a_heading-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="22.0" layoutY="416.0" opacity="0.84">
+               <image>
+                  <Image url="@../icon/settings-3110.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="412.0" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: white;" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="rootVary" layoutX="180.0" prefHeight="720.0" prefWidth="1100.0">
+            <children>
+                <AnchorPane fx:id="rootDash" layoutY="70.0" prefHeight="650.0" prefWidth="1180.0">
+               <children>
+                  <Pane layoutX="686.0" layoutY="17.0" prefHeight="601.0" prefWidth="452.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+                     <children>
+                        <Label layoutX="25.0" layoutY="14.0" text="Latest order dues">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                        <TableView fx:id="tblOrders" layoutX="26.0" layoutY="56.0" prefHeight="517.0" prefWidth="393.0">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="165.0" text="Order Id" />
+                            <TableColumn fx:id="colDate" prefWidth="227.0" text="Date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="27.0" layoutY="23.0" prefHeight="200.0" prefWidth="298.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+                     <children>
+                        <Label layoutX="31.0" layoutY="14.0" text="Total Employee">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="31.0" layoutY="75.0">
+                           <image>
+                              <Image url="@../icon/carpenter.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblEmp" layoutX="149.0" layoutY="75.0" prefHeight="70.0" prefWidth="129.0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="341.0" layoutY="23.0" prefHeight="200.0" prefWidth="298.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+                     <children>
+                        <Label layoutX="45.0" layoutY="14.0" text="Total Items">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font></Label>
+                        <ImageView fitHeight="70.0" fitWidth="76.0" layoutX="14.0" layoutY="77.0">
+                           <image>
+                              <Image url="@../icon/furniture.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblItem" layoutX="149.0" layoutY="77.0" prefHeight="70.0" prefWidth="129.0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <PieChart fx:id="pieChart" layoutX="27.0" layoutY="268.0" prefHeight="342.0" prefWidth="492.0" />
+               </children></AnchorPane>
+              <AnchorPane prefHeight="70.0" prefWidth="1180.0" style="-fx-background-color: white;" />
+            <Label layoutX="15.0" layoutY="10.0" prefWidth="129.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

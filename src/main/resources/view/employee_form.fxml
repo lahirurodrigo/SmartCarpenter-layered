@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.SmartCarpenter.controller.EmployeeFormController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="1180.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" prefHeight="30.0" prefWidth="325.0" text="Employee Management">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="25.0" layoutY="78.0" text="Add new employee">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="130.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="219.0" text="Position">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="176.0" text="Employee Id">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="271.0" text="Age">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="21.0" layoutY="322.0" text="Gender">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtName" layoutX="122.0" layoutY="126.0" prefHeight="24.0" prefWidth="240.0" />
+      <TextField fx:id="txtPosition" layoutX="122.0" layoutY="215.0" />
+      <TextField fx:id="txtAge" layoutX="123.0" layoutY="267.0" prefHeight="24.0" prefWidth="92.0" />
+      <JFXComboBox fx:id="cmbGender" layoutX="122.0" layoutY="318.0" prefHeight="24.0" prefWidth="81.0" />
+      <Pane layoutX="617.0" layoutY="79.0" prefHeight="377.0" prefWidth="532.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="10.0" layoutY="4.0" text="Manage Salary">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="101.0" text="Salary Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="156.0" text="Employee Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="287.0" text="Amount to pay">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSalaryIdManage" layoutX="85.0" layoutY="98.0" prefHeight="24.0" prefWidth="150.0" textFill="#8e4862">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="txtAmountManage" layoutX="254.0" layoutY="281.0" prefHeight="30.0" prefWidth="170.0" />
+            <JFXButton fx:id="btnSaveSalary" buttonType="RAISED" contentDisplay="RIGHT" layoutX="374.0" layoutY="321.0" onAction="#btnSaveSalaryOnAction" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Save &amp; Print">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="10.0" layoutY="58.0" text="Add new salary details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbMonthManage" layoutX="328.0" layoutY="98.0" prefHeight="24.0" prefWidth="150.0" />
+            <Label layoutX="242.0" layoutY="101.0" text="Month">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbEIdManage" layoutX="12.0" layoutY="177.0" onAction="#cmbEIdManageOnAction" prefHeight="24.0" prefWidth="118.0" />
+            <Label layoutX="160.0" layoutY="155.0" text="Employee Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmpNameSalary" layoutX="160.0" layoutY="174.0" prefHeight="30.0" prefWidth="325.0" textFill="#8e4862">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="235.0" text="Salary due for month">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDueSalary" layoutX="176.0" layoutY="233.0" prefHeight="24.0" prefWidth="274.0" textFill="#8e4862">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="lblId" layoutX="123.0" layoutY="174.0" prefHeight="24.0" prefWidth="125.0" textFill="#8e4862">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" contentDisplay="RIGHT" layoutX="203.0" layoutY="419.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #BFFB8B; -fx-background-radius: 10;" text="Clear">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="293.0" layoutY="419.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Save">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPrint" contentDisplay="RIGHT" layoutX="39.0" layoutY="491.0" onAction="#btnPrintOnAction" opacity="0.51" prefHeight="149.0" prefWidth="208.0" style="-fx-background-color: #D5CFF0; -fx-background-radius: 0;" text="  ">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="88.0" fitWidth="94.0" layoutX="87.0" layoutY="508.0" opacity="0.51">
+         <image>
+            <Image url="@../icon/contact-list.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="613.0" text="Employee List" />
+      <Pane layoutX="617.0" layoutY="473.0" prefHeight="233.0" prefWidth="532.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" text="View or delete salary details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbSIdView" layoutX="128.0" layoutY="41.0" prefHeight="24.0" prefWidth="118.0" />
+            <Label layoutX="24.0" layoutY="43.0" text="Salary Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMonthView" layoutX="330.0" layoutY="41.0" prefHeight="24.0" prefWidth="150.0" />
+            <Label layoutX="266.0" layoutY="43.0" text="Month">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="86.0" text="Employee Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtEIdView" layoutX="128.0" layoutY="84.0" prefHeight="24.0" prefWidth="193.0" />
+            <Label layoutX="60.0" layoutY="137.0" text="Amount">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAmountView" layoutX="128.0" layoutY="129.0" prefHeight="35.0" prefWidth="170.0" />
+            <JFXButton fx:id="BtnDeleteSalary" buttonType="RAISED" contentDisplay="RIGHT" layoutX="427.0" layoutY="181.0" onAction="#btnDeleteSalaryOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #f08080; -fx-background-radius: 10;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnViewSalary" buttonType="RAISED" contentDisplay="RIGHT" layoutX="330.0" layoutY="181.0" onAction="#btnViewSalaryOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #F9F871; -fx-background-radius: 10;" text="View">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

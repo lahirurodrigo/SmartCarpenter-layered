@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.SmartCarpenter.controller.RawMaterialFormController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="1180.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Raw Materials">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="11.0" layoutY="131.0" text="Code">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="87.0" text="Add a new Item">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" contentDisplay="RIGHT" layoutX="280.0" layoutY="299.0" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Add">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="10.0" layoutY="172.0" text="Category">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="207.0" text="Unit Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="244.0" text="Quantity">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCode" layoutX="97.0" layoutY="131.0" prefHeight="24.0" prefWidth="204.0" />
+      <TextField fx:id="txtCategory" layoutX="97.0" layoutY="170.0" prefHeight="24.0" prefWidth="204.0" />
+      <TextField fx:id="txtUnitPrice" layoutX="97.0" layoutY="205.0" />
+      <TextField fx:id="txtQuantity" layoutX="97.0" layoutY="242.0" prefHeight="24.0" prefWidth="92.0" />
+      <Pane layoutX="14.0" layoutY="360.0" prefHeight="324.0" prefWidth="396.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="11.0" layoutY="16.0" text="Manage stock ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="55.0" text="Code">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="108.0" text="Category">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="106.0" layoutY="208.0" text="Quantity">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="153.0" text="Unit Price">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbCodeManage" layoutX="62.0" layoutY="53.0" onAction="#cmbCodeManageOnAction" prefHeight="24.0" prefWidth="120.0" />
+            <JFXTextField fx:id="txtCategoryManage" layoutX="105.0" layoutY="106.0" prefHeight="24.0" prefWidth="262.0" />
+            <JFXTextField fx:id="txtUnitPriceManage" layoutX="105.0" layoutY="151.0" prefHeight="24.0" prefWidth="262.0" />
+            <TextField fx:id="txtQuantityManage" layoutX="198.0" layoutY="195.0" prefHeight="46.0" prefWidth="156.0" />
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="205.0" layoutY="267.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="159.0" style="-fx-background-color: #f08080; -fx-background-radius: 10;" text="Delete item">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAddToStock" buttonType="RAISED" contentDisplay="RIGHT" layoutX="28.0" layoutY="267.0" onAction="#btnAddToStockOnAction" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Add to stock">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="743.0" layoutY="87.0" prefHeight="592.0" prefWidth="417.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <TableView fx:id="tblStock" layoutX="22.0" layoutY="67.0" prefHeight="500.0" prefWidth="376.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="97.0" text="Code" />
+                <TableColumn fx:id="colCategory" prefWidth="177.0" text="Category" />
+                  <TableColumn fx:id="colQty" prefWidth="101.0" text="Qty in hand" />
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="25.0" text="Stock Information">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.SmartCarpenter.controller.CustomerFormController">
+    <children>
+        <JFXButton fx:id="btnSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="316.0" layoutY="335.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Save">
+            <font>
+                <Font name="System Bold" size="10.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="400.0" prefHeight="300.0" prefWidth="850.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="141.0" text="Tel" />
+                <TableColumn fx:id="colName" prefWidth="286.0" text="Name" />
+                <TableColumn fx:id="colAddress" prefWidth="229.0" text="Address" />
+                <TableColumn fx:id="colTel" prefWidth="193.0" text="Email" />
+            </columns>
+        </TableView>
+      <AnchorPane prefHeight="70.0" prefWidth="1180.0" style="-fx-background-color: white;">
+         <children>
+              <Label layoutX="15.0" layoutY="10.0" text="Customer Manage" textFill="#2c3e50">
+                  <font>
+                      <Font name="System Bold" size="19.0" />
+                  </font>
+              </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="887.0" layoutY="82.0" prefHeight="635.0" prefWidth="287.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="39.0" layoutY="20.0" prefHeight="16.0" prefWidth="222.0" text="Update customer information">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbIdUpdate" layoutX="15.0" layoutY="89.0" prefHeight="24.0" prefWidth="195.0" />
+            <Label layoutX="14.0" layoutY="59.0" text="Select customer id" />
+            <JFXTextField fx:id="txtNameUpdate" layoutX="112.0" layoutY="137.0" />
+            <Label layoutX="4.0" layoutY="153.0" text="Name " />
+            <Label layoutX="2.0" layoutY="197.0" text="Address " />
+            <Label layoutX="4.0" layoutY="243.0" text="email" />
+            <JFXTextField fx:id="txtAddressUpdate" layoutX="112.0" layoutY="181.0" />
+            <JFXTextField fx:id="txtTelUpdate" layoutX="6.0" layoutY="268.0" prefHeight="24.0" prefWidth="272.0" />
+              <JFXButton fx:id="btnUpdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="193.0" layoutY="318.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #C4F9FF; -fx-background-radius: 10;" text="Update">
+                  <font>
+                      <Font name="System Bold" size="10.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+            <JFXButton fx:id="btnClearUpdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="104.0" layoutY="318.0" onAction="#btnClearUpdateOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #BFFB8B; -fx-background-radius: 10;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+      <TextField fx:id="txtName" layoutX="130.0" layoutY="186.0" prefHeight="24.0" prefWidth="266.0" />
+      <TextField fx:id="txtAddress" layoutX="22.0" layoutY="239.0" />
+      <TextField fx:id="txtTel" layoutX="24.0" layoutY="288.0" prefHeight="24.0" prefWidth="372.0" />
+      <TextField fx:id="txtId" layoutX="22.0" layoutY="127.0" prefHeight="24.0" prefWidth="123.0" />
+      <ComboBox layoutX="24.0" layoutY="186.0" prefHeight="24.0" prefWidth="88.0" />
+      <Label layoutX="24.0" layoutY="111.0" text="Phone no *" />
+      <Label layoutX="130.0" layoutY="167.0" text="Name *" />
+      <Label layoutX="24.0" layoutY="167.0" text="Title *" />
+      <Label layoutX="22.0" layoutY="224.0" text="Address *" />
+      <Label layoutX="23.0" layoutY="272.0" text="Email " />
+      <JFXButton fx:id="btnClear" buttonType="RAISED" contentDisplay="RIGHT" layoutX="210.0" layoutY="335.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #BFFB8B; -fx-background-radius: 10;" text="Clear">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="22.0" layoutY="77.0" text="Adding a new customer">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="447.0" layoutY="82.0" prefHeight="300.0" prefWidth="432.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <TextField fx:id="txtIdView" layoutX="21.0" layoutY="14.0" prefHeight="20.0" prefWidth="195.0" promptText="enter tel" />
+              <JFXButton fx:id="btnView" buttonType="RAISED" contentDisplay="RIGHT" layoutX="123.0" layoutY="16.0" onAction="#btnViewOnAction" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="search     ">
+                  <font>
+                      <Font size="10.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+            <JFXButton fx:id="btnClearView" buttonType="RAISED" contentDisplay="RIGHT" layoutX="240.0" layoutY="247.0" onAction="#btnClearViewOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #BFFB8B; -fx-background-radius: 10;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+              <JFXButton fx:id="btnDelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="329.0" layoutY="247.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #f08080; -fx-background-radius: 10;" text="Delete" textFill="#000000b0">
+                  <font>
+                      <Font name="System Bold" size="10.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+            <JFXTextField fx:id="txtNameView" layoutX="122.0" layoutY="66.0" prefHeight="24.0" prefWidth="287.0" />
+            <JFXTextField fx:id="txtAddressView" layoutX="122.0" layoutY="119.0" prefHeight="24.0" prefWidth="295.0" />
+            <JFXTextField fx:id="txtTelView" layoutX="122.0" layoutY="181.0" prefHeight="24.0" prefWidth="295.0" />
+            <Label layoutX="33.0" layoutY="82.0" text="Name " />
+            <Label layoutX="26.0" layoutY="135.0" text="Address " />
+            <Label layoutX="33.0" layoutY="197.0" text="email" />
+            <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="176.0" layoutY="16.0">
+               <image>
+                  <Image url="@../icon/icons8-search-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
